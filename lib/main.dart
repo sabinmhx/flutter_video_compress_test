@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
     String outputPath = '${appDocDir.path}/$outputFileName';
 
     String ffmpegCommand =
-        '-i "$inputPath" -c:v libvpx -b:v 1M -c:a libvorbis "$outputPath"';
+        '-i "$inputPath" -c:v libwebp -b:v 1M -c:a libvorbis "$outputPath"';
 
     try {
       FFmpegSession session = await FFmpegKit.execute(ffmpegCommand);
